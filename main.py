@@ -31,8 +31,10 @@ while True:
     print("=======   =======     ======")
 
     for i in range(1, user_int + 1):
-        print(f"{i}   \t\t{i**2}\t\t\t{i**3}")
-
+        print(f"{i}", " "*(8-len(str(i))),
+              f"{i**2}", " "*(10-len(str(i**2))),
+              f"{i**3}")
+    
     # calls a validation function to make sure user only responds yes or no
     user_break = loop_break()
     if user_break == 'n':
